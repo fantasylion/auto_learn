@@ -16,6 +16,8 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+import os
+
 from selenium import webdriver
 import time
 import re
@@ -25,7 +27,7 @@ from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.chrome.options import Options
 
 from allow_flash import allow_flash
-
+import pickle
 
 class Learn:
 
@@ -43,6 +45,7 @@ class Learn:
         self.user = '15968105821'
         self.pwd = '250941'
         self.current_page = 1
+        self.learn_store = self.read_object()
 
     def open_main_page(self):
         allow_flash(self.browser, self.url)
@@ -67,6 +70,7 @@ class Learn:
         self.listen_time(0)
         # 视频看完了点返回
         self.return_to_training_info()
+        time.sleep(5)
         self.return_to_training_list()
 
     def return_to_training_info(self):
@@ -150,12 +154,27 @@ class Learn:
                 self.learn_store[self.current_course_index].append(self.current_training_index)
             else:
                 self.learn_store.update({self.current_course_index: [self.current_training_index]})
-
             print(self.learn_store)
+            self.store_object(self.learn_store)
             return False
         btns[0].click()
         return True
 
+    def store_object(self, current_training):
+        file_name = 'current_training.pkl'
+        with open(file_name, 'wb') as file_store:
+            picklestring = pickle.dump(current_training, file_store)
+
+    def read_object(self):
+        file_name = 'current_training.pkl'
+        if os.path.exists(file_name):
+            with open(file_name, 'rb') as file_store:
+                learn = pickle.load(file_store)
+            return learn
+        return {}
+
 
 learn = Learn()
 learn.open_main_page()
+
+
