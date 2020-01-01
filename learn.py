@@ -29,7 +29,10 @@ from allow_flash import allow_flash
 
 class Learn:
 
-    learn_store = {'course_1': 1}
+    learn_store = {}
+    learn_course = []
+    current_course_index = 0
+    current_training_index = 0
 
     def __init__(self):
         chrome_options = Options()
@@ -58,16 +61,21 @@ class Learn:
         traning.click()
         if self.into_start_study() is False:
             print('skip read video')
-            self.aleady_readed_return()
+            self.return_to_training_list()
             return
         self.play_video()
         self.listen_time(0)
         # 视频看完了点返回
-        return_btn = self.browser.find_element_by_css_selector('#return .return')
+        self.return_to_training_info()
+        self.return_to_training_list()
+
+    def return_to_training_info(self):
+        """从视频播放页面返回到课件详情页"""
+        return_btn = self.browser.find_element_by_css_selector('#return .btn_c')
         return_btn.click()
 
-    def aleady_readed_return(self):
-        """视频已经看过了，点返回"""
+    def return_to_training_list(self):
+        """从课件详情页面返回到课件列表页面"""
         return_btn2 = self.browser.find_elements_by_css_selector('.tj_btn .btn_c')
         return_btn2[1].click()
 
@@ -105,11 +113,12 @@ class Learn:
     def select_course(self):
         self.browser.switch_to.frame('mainFrame')
         lis = self.browser.find_elements_by_css_selector('.trainingList li')
-        for li in lis:
+        for index, li in enumerate(lis):
             training = li.find_element_by_css_selector('.trainingPic')
             p_list = li.find_elements_by_css_selector('.training_infor p')
             print(p_list[3].text)
             if '培训状态： 未合格' == p_list[3].text:
+                self.current_course_index = index
                 return training
         return None
 
@@ -118,11 +127,17 @@ class Learn:
         tbody_list = self.browser.find_elements_by_css_selector('table tbody')
         print(tbody_list)
         tr_list = tbody_list[2].find_elements_by_css_selector('tr')
-        for tr in tr_list:
+        for index, tr in enumerate(tr_list):
             td_list = tr.find_elements_by_css_selector('td')
+            try:
+                if self.current_course_index in self.learn_store and index in self.learn_store[self.current_course_index]:
+                    continue
+            except KeyError:
+                print('{} is not it finished store'.format(str(index)))
             if td_list[5].text == '未完成':
-                print(td_list[1])
+                print('第{}是未完成'.format(str(index+1)))
                 study_link = td_list[7].find_element_by_css_selector('a')
+                self.current_training_index = index
                 return study_link
         return None
 
@@ -130,7 +145,13 @@ class Learn:
         time.sleep(2)
         btns = self.browser.find_elements_by_css_selector('table tbody tr #button2')
         if btns[0].get_attribute('value') == '已学习':
-            print('this already readed.')
+            print('{}.{} this already readed.'.format(self.current_course_index, self.current_training_index))
+            if self.current_course_index in self.learn_store:
+                self.learn_store[self.current_course_index].append(self.current_training_index)
+            else:
+                self.learn_store.update({self.current_course_index: [self.current_training_index]})
+
+            print(self.learn_store)
             return False
         btns[0].click()
         return True
