@@ -16,6 +16,7 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+import configparser
 import os
 
 from selenium import webdriver
@@ -42,8 +43,12 @@ class Learn:
         self.browser = webdriver.Chrome('chromedriver.exe', options=chrome_options)
         self.url = 'http://hzcj.91cme.com/'
         self.current_date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        self.user = '15968105821'
-        self.pwd = '250941'
+
+        self.learn_config = configparser.ConfigParser()
+        self.learn_config.read("learn_config.ini")
+
+        self.user = self.learn_config.get("account", "user_name")
+        self.pwd = self.learn_config.get("account", "password")
         self.current_page = 1
         self.learn_store = self.read_object()
 
@@ -99,7 +104,9 @@ class Learn:
 
     def play_video(self):
         time.sleep(10)
-        pyautogui.click(420, 455, clicks=1, interval=0.0, button='left')
+        x_str = self.learn_config.get("screen", "x")
+        y_str = self.learn_config.get("screen", "y")
+        pyautogui.click(x=float(x_str), y=float(y_str), clicks=1, interval=0.0, button='left')
 
     def login_in(self):
         user = self.browser.find_element_by_id('txtLogonUserCode')
