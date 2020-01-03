@@ -29,6 +29,7 @@ from selenium.webdriver.chrome.options import Options
 
 from allow_flash import allow_flash
 import pickle
+import random as r
 
 class Learn:
 
@@ -37,6 +38,8 @@ class Learn:
     current_course_index = 0
     current_training_index = 0
     current_training_store_file = 'current_training.pkl'
+    question_titles = []
+    answer_list = []
 
     def __init__(self):
         chrome_options = Options()
@@ -82,28 +85,32 @@ class Learn:
             self.return_to_training_list()
             return
         self.play_video()
-        self.listen_time(0)
+        self.listen_video_end(0)
         # 视频看完了点返回
         self.return_to_training_info()
-        time.sleep(5)
+        # 视频看完了开始考试
+        self.into_exam_page()
         self.return_to_training_list()
 
     def into_trainning_info_page(self):
+        time.sleep(2)
         traning = self.select_traning()
         time.sleep(1)
         traning.click()
 
     def return_to_training_info(self):
         """从视频播放页面返回到课件详情页"""
+        time.sleep(2)
         return_btn = self.browser.find_element_by_css_selector('#return .btn_c')
         return_btn.click()
 
     def return_to_training_list(self):
         """从课件详情页面返回到课件列表页面"""
+        time.sleep(3)
         return_btn2 = self.browser.find_elements_by_css_selector('.tj_btn .btn_c')
         return_btn2[1].click()
 
-    def listen_time(self, count):
+    def listen_video_end(self, count):
         try:
             if count > 100:
                 print('listen more than 100 times')
@@ -115,7 +122,7 @@ class Learn:
                 current_time = self.browser.find_element_by_css_selector('#getCurrentTime span')
                 print(current_time.text)
         except StaleElementReferenceException:
-            self.listen_time(count)
+            self.listen_video_end(count)
 
     def play_video(self):
         time.sleep(10)
@@ -137,6 +144,7 @@ class Learn:
         login_btn.click()
 
     def select_course(self):
+        time.sleep(3)
         self.browser.switch_to.frame('mainFrame')
         lis = self.browser.find_elements_by_css_selector('.trainingList li')
         for index, li in enumerate(lis):
@@ -155,11 +163,11 @@ class Learn:
         tr_list = tbody_list[2].find_elements_by_css_selector('tr')
         for index, tr in enumerate(tr_list):
             td_list = tr.find_elements_by_css_selector('td')
-            try:
-                if self.current_course_index in self.learn_store and index in self.learn_store[self.current_course_index]:
-                    continue
-            except KeyError:
-                print('{} is not it finished store'.format(str(index)))
+            # try:
+            #     if self.current_course_index in self.learn_store and index in self.learn_store[self.current_course_index]:
+            #         continue
+            # except KeyError:
+            #     print('{} is not it finished store'.format(str(index)))
             if td_list[5].text == '未完成':
                 print('第{}是未完成'.format(str(index+1)))
                 study_link = td_list[7].find_element_by_css_selector('a')
@@ -174,7 +182,120 @@ class Learn:
         if bol is True:
             btns[0].click()
             return True
+        # 如果视频已经看完了，看下需不需要考试
+        self.into_exam_page()
         return False
+
+    def into_exam_page(self):
+        """
+        进入考试界面
+        :param btn:
+        :return:
+        """
+        time.sleep(3)
+        try:
+            home_work = self.browser.find_element_by_xpath("//input[@id='button2']/../..").find_element_by_css_selector(
+                '.zt_red')
+        except :
+            print('已经完成作业')
+            return
+        if '参加练习' in home_work.text:
+            print('视频未看完')
+        if '参加考试' in home_work.text:
+            home_work.click()
+            self.start_exam()
+
+    def start_exam(self):
+        """
+        开始考试
+        :return:
+        """
+        time.sleep(5)
+        self.browser.switch_to.frame('frameExam')
+        self.answer_the_question()
+        self.find_true_answers()
+        retry_success = self.retry_answer_the_question()
+        if retry_success is False:
+            return
+        self.apply_hours()
+
+    def apply_hours(self):
+        """
+        申请学时
+        :return:
+        """
+        time.sleep(3)
+        applay_btn = self.browser.find_element_by_css_selector('.tgks_content .tgks_title_c div')
+        if '立即申请学时' in applay_btn.text:
+            applay_btn.click()
+            self.confirm_alert()
+
+    def find_true_answers(self):
+        time.sleep(2)
+        ques_infos = self.browser.find_elements_by_css_selector('.ques_info')
+        self.question_titles.clear()
+        self.answer_list.clear()
+        for index, ques_info in enumerate(ques_infos):
+            question_title = ques_info.find_element_by_css_selector('.ksts_title1 span').text  # 题目
+            question_answers = ques_info.find_elements_by_css_selector('#ques_key span')  # 选择 'A.  低度风险区域'、'B.  中度风险区域'、'C.  重度风险区域'、'D.  无风险区域'
+            question_answer_true = ques_info.find_elements_by_css_selector('#ques_result #ques_result_true')[1].text  # '正确答案: C'
+            answer_true = re.findall('正确答案: ([a-zA-Z]{1})', question_answer_true)
+            answer_true_index = ['A', 'B', 'C', 'D'].index(answer_true[0])
+            self.question_titles.append(question_title)
+            self.answer_list.append(answer_true_index)
+        print("question titles is : {}".format(self.question_titles))
+        print("anser is : {}".format(self.answer_list))
+
+    def answer_the_question(self):
+        """
+        随机回答问题
+        :return:
+        """
+        time.sleep(2)
+        q_list = self.browser.find_elements_by_css_selector('#questionName div')  # 问题列表
+        for question in q_list:
+            time.sleep(r.randint(3, 10))
+            answers = question.find_elements_by_css_selector('ul .questionContent')
+            answer_index = r.randint(0, len(answers) - 1)
+            answers[answer_index].find_element_by_css_selector('input').click()  # 随机选一个答案
+        self.browser.find_element_by_css_selector('#tijiao').click()  # 提交
+        self.confirm_alert()
+
+    def retry_answer_the_question(self):
+        """
+        有了答案后重新答题
+        :return:
+        """
+        time.sleep(2)
+        retry_btn = self.browser.find_element_by_xpath("//input[@value='重新答题']")
+        retry_btn.click()
+        time.sleep(5)
+        try:
+            self.browser.switch_to.frame('frameExam')
+        except:
+            print('重做切换失败')
+        q_list = self.browser.find_elements_by_css_selector('#questionName div')  # 问题列表
+        if len(self.question_titles) != len(q_list):
+            print('the answer is not right.')
+            return False
+        for index, question in enumerate(q_list):
+            time.sleep(r.randint(3, 10))
+            answers = question.find_elements_by_css_selector('ul .questionContent')
+            answer_index = self.answer_list[index]
+            answers[answer_index].find_element_by_css_selector('input').click()  # 随机选一个答案
+        self.browser.find_element_by_css_selector('#tijiao').click()  # 提交
+        self.confirm_alert()
+        return True
+
+    def confirm_alert(self):
+        """
+        确认alert
+        :return:
+        """
+        time.sleep(2)
+        ale = self.browser.switch_to.alert  # alert 确定
+        print(ale.text)
+        ale.accept()
 
     def inspect_video_study_status(self, btns):
         """
@@ -184,12 +305,12 @@ class Learn:
         """
         if btns[0].get_attribute('value') == '已学习':
             print('{}.{} this already readed.'.format(self.current_course_index, self.current_training_index))
-            if self.current_course_index in self.learn_store:
-                self.learn_store[self.current_course_index].append(self.current_training_index)
-            else:
-                self.learn_store.update({self.current_course_index: [self.current_training_index]})
-            print(self.learn_store)
-            self.store_object(self.learn_store, self.current_training_store_file)
+            # if self.current_course_index in self.learn_store:
+            #     self.learn_store[self.current_course_index].append(self.current_training_index)
+            # else:
+            #     self.learn_store.update({self.current_course_index: [self.current_training_index]})
+            # print(self.learn_store)
+            # self.store_object(self.learn_store, self.current_training_store_file)
             return False
         return True
 
