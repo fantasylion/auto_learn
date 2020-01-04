@@ -2,7 +2,7 @@
  False,
  False,
  True,
- None,
+ 'rr.ico',
  None,
  False,
  False,
@@ -38,7 +38,7 @@
  [],
  False,
  False,
- 1578128219,
+ 1578139648,
  [('runw.exe',
    'C:\\DATA\\code\\auto_learn\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
    'EXECUTABLE')])

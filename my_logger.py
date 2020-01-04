@@ -2,6 +2,7 @@
 
 import logging
 from logging import handlers
+from tkinter import END
 
 
 class MyLogger(object):
@@ -14,7 +15,7 @@ class MyLogger(object):
         'crit': logging.CRITICAL
     }#日志级别关系映射
 
-    def __init__(self, filename, level='info', when='D', backCount=3, fmt='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'):
+    def __init__(self, log_board, filename, level='info', when='D', backCount=3, fmt='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'):
         self.logger = logging.getLogger(filename)
         format_str = logging.Formatter(fmt)#设置日志格式
         self.logger.setLevel(self.level_relations.get(level))#设置日志级别
@@ -32,3 +33,12 @@ class MyLogger(object):
         th.setFormatter(format_str)#设置文件里写入的格式
         self.logger.addHandler(sh) #把对象加到logger里
         self.logger.addHandler(th)
+        self.log_board = log_board
+
+    def info(self, msg, *args, **kwargs):
+        try:
+            self.log_board.insert(END, str(msg) + '\n')
+        except:
+            print('error')
+        self.logger.info(msg, *args, **kwargs)
+
