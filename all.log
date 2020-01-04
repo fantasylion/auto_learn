@@ -1,0 +1,5 @@
+2020-01-04 17:36:56,813 - C:/DATA/code/auto_learn/learn.py[line:173] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 17:36:56,868 - C:/DATA/code/auto_learn/learn.py[line:173] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 17:37:05,043 - C:/DATA/code/auto_learn/learn.py[line:182] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="5a971a80-7c98-4187-a795-8132758561b4")>, <selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="770caef0-dc7a-4af7-8be0-399fdbbe6510")>, <selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="0e7a5b75-4aae-4e7b-aac3-aa0fff475edf")>]
+2020-01-04 17:37:05,420 - C:/DATA/code/auto_learn/learn.py[line:192] - INFO: 第8是未完成
+2020-01-04 17:37:08,610 - C:/DATA/code/auto_learn/learn.py[line:328] - INFO: 1.7 this already readed.

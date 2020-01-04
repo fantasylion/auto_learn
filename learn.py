@@ -22,7 +22,6 @@ import os
 from selenium import webdriver
 import time
 import re
-import logging
 import pyautogui
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.chrome.options import Options
@@ -30,6 +29,9 @@ from selenium.webdriver.chrome.options import Options
 from allow_flash import allow_flash
 import pickle
 import random as r
+
+from my_logger import MyLogger
+
 
 class Learn:
 
@@ -40,6 +42,7 @@ class Learn:
     current_training_store_file = 'current_training.pkl'
     question_titles = []
     answer_list = []
+    my_logger = MyLogger('all.log', level='debug')
 
     def __init__(self):
         chrome_options = Options()
@@ -69,10 +72,26 @@ class Learn:
         :return:
         """
         course = self.select_course()
-        time.sleep(1)
-        course.click()
-        while True:
+        while course is not None:
+            time.sleep(1)
+            course.click()
             self.ready_to_read_video()
+            self.show_course()
+            course = self.select_course()
+
+    def show_course(self):
+        """
+        展示课程
+        :return:
+        """
+        time.sleep(5)
+        self.browser.switch_to.default_content()
+        time.sleep(1)
+        self.browser.switch_to.frame('topFrame')
+        navl_list = self.browser.find_elements_by_css_selector('#navul li')
+        navl_list[3].click()
+        time.sleep(1)
+        self.browser.switch_to.default_content()
 
     def ready_to_read_video(self):
         """
@@ -81,7 +100,7 @@ class Learn:
         """
         self.into_trainning_info_page()
         if self.into_video_page() is False:
-            print('skip read video')
+            self.my_logger.logger.info('skip read video')
             self.return_to_training_list()
             return
         self.play_video()
@@ -90,7 +109,6 @@ class Learn:
         self.return_to_training_info()
         # 视频看完了开始考试
         self.into_exam_page()
-        self.return_to_training_list()
 
     def into_trainning_info_page(self):
         time.sleep(2)
@@ -113,19 +131,21 @@ class Learn:
     def listen_video_end(self, count):
         try:
             if count > 100:
-                print('listen more than 100 times')
+                self.my_logger.logger.info('listen more than 100 times')
             count = count + 1
             current_time = self.browser.find_element_by_css_selector('#getCurrentTime span')
             duration = self.browser.find_element_by_css_selector('#duration span')
             while duration.text != current_time.text:
                 time.sleep(20)
                 current_time = self.browser.find_element_by_css_selector('#getCurrentTime span')
-                print(current_time.text)
+                self.my_logger.logger.info(current_time.text)
         except StaleElementReferenceException:
             self.listen_video_end(count)
 
     def play_video(self):
         time.sleep(10)
+        js_top = "var q=document.documentElement.scrollTop=0"
+        self.browser.execute_script(js_top)
         x_str = self.learn_config.get("screen", "x")
         y_str = self.learn_config.get("screen", "y")
         pyautogui.click(x=float(x_str), y=float(y_str), clicks=1, interval=0.0, button='left')
@@ -150,7 +170,7 @@ class Learn:
         for index, li in enumerate(lis):
             training = li.find_element_by_css_selector('.trainingPic')
             p_list = li.find_elements_by_css_selector('.training_infor p')
-            print("第{}个课程状态：{}".format(str(index), p_list[3].text))
+            self.my_logger.logger.info("第{}个课程状态：{}".format(str(index), p_list[3].text))
             if '培训状态： 未合格' == p_list[3].text:
                 self.current_course_index = index
                 return training
@@ -159,7 +179,7 @@ class Learn:
     def select_traning(self):
         time.sleep(5)
         tbody_list = self.browser.find_elements_by_css_selector('table tbody')
-        print(tbody_list)
+        self.my_logger.logger.info(tbody_list)
         tr_list = tbody_list[2].find_elements_by_css_selector('tr')
         for index, tr in enumerate(tr_list):
             td_list = tr.find_elements_by_css_selector('td')
@@ -169,7 +189,7 @@ class Learn:
             # except KeyError:
             #     print('{} is not it finished store'.format(str(index)))
             if td_list[5].text == '未完成':
-                print('第{}是未完成'.format(str(index+1)))
+                self.my_logger.logger.info('第{}是未完成'.format(str(index+1)))
                 study_link = td_list[7].find_element_by_css_selector('a')
                 self.current_training_index = index
                 return study_link
@@ -197,10 +217,10 @@ class Learn:
             home_work = self.browser.find_element_by_xpath("//input[@id='button2']/../..").find_element_by_css_selector(
                 '.zt_red')
         except :
-            print('已经完成作业')
+            self.my_logger.logger.info('已经完成作业')
             return
         if '参加练习' in home_work.text:
-            print('视频未看完')
+            self.my_logger.logger.info('视频未看完')
         if '参加考试' in home_work.text:
             home_work.click()
             self.start_exam()
@@ -218,6 +238,7 @@ class Learn:
         if retry_success is False:
             return
         self.apply_hours()
+
 
     def apply_hours(self):
         """
@@ -243,8 +264,8 @@ class Learn:
             answer_true_index = ['A', 'B', 'C', 'D'].index(answer_true[0])
             self.question_titles.append(question_title)
             self.answer_list.append(answer_true_index)
-        print("question titles is : {}".format(self.question_titles))
-        print("anser is : {}".format(self.answer_list))
+        self.my_logger.logger.info("question titles is : {}".format(self.question_titles))
+        self.my_logger.logger.info("anser is : {}".format(self.answer_list))
 
     def answer_the_question(self):
         """
@@ -273,10 +294,10 @@ class Learn:
         try:
             self.browser.switch_to.frame('frameExam')
         except:
-            print('重做切换失败')
+            self.my_logger.logger.info('重做切换失败')
         q_list = self.browser.find_elements_by_css_selector('#questionName div')  # 问题列表
         if len(self.question_titles) != len(q_list):
-            print('the answer is not right.')
+            self.my_logger.logger.info('the answer is not right.')
             return False
         for index, question in enumerate(q_list):
             time.sleep(r.randint(3, 10))
@@ -294,7 +315,7 @@ class Learn:
         """
         time.sleep(2)
         ale = self.browser.switch_to.alert  # alert 确定
-        print(ale.text)
+        self.my_logger.logger.info(ale.text)
         ale.accept()
 
     def inspect_video_study_status(self, btns):
@@ -304,7 +325,7 @@ class Learn:
         :return:
         """
         if btns[0].get_attribute('value') == '已学习':
-            print('{}.{} this already readed.'.format(self.current_course_index, self.current_training_index))
+            self.my_logger.logger.info('{}.{} this already readed.'.format(self.current_course_index, self.current_training_index))
             # if self.current_course_index in self.learn_store:
             #     self.learn_store[self.current_course_index].append(self.current_training_index)
             # else:
@@ -337,7 +358,6 @@ class Learn:
         return {}
 
 
-learn = Learn()
-learn.open_main_page()
+
 
 
