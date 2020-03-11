@@ -1,0 +1,215 @@
+2020-01-04 17:36:56,813 - C:/DATA/code/auto_learn/learn.py[line:173] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 17:36:56,868 - C:/DATA/code/auto_learn/learn.py[line:173] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 17:37:05,043 - C:/DATA/code/auto_learn/learn.py[line:182] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="5a971a80-7c98-4187-a795-8132758561b4")>, <selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="770caef0-dc7a-4af7-8be0-399fdbbe6510")>, <selenium.webdriver.remote.webelement.WebElement (session="f472e35265a2bb9b4aa4f129320aab56", element="0e7a5b75-4aae-4e7b-aac3-aa0fff475edf")>]
+2020-01-04 17:37:05,420 - C:/DATA/code/auto_learn/learn.py[line:192] - INFO: 第8是未完成
+2020-01-04 17:37:08,610 - C:/DATA/code/auto_learn/learn.py[line:328] - INFO: 1.7 this already readed.
+2020-01-04 18:33:54,121 - C:\DATA\code\auto_learn\learn.py[line:174] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 18:33:54,178 - C:\DATA\code\auto_learn\learn.py[line:174] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 18:34:02,380 - C:\DATA\code\auto_learn\learn.py[line:183] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="289597f938b4c0fee921a2c2d9afc13a", element="72ebfe08-608d-4a90-9eb5-8e260171f974")>, <selenium.webdriver.remote.webelement.WebElement (session="289597f938b4c0fee921a2c2d9afc13a", element="cafb5d71-9a8c-43ea-a99b-25686d0ca866")>, <selenium.webdriver.remote.webelement.WebElement (session="289597f938b4c0fee921a2c2d9afc13a", element="e5811ddd-473f-4810-8740-b7a4d626603d")>]
+2020-01-04 18:34:02,676 - C:\DATA\code\auto_learn\learn.py[line:193] - INFO: 第9是未完成
+2020-01-04 18:34:05,872 - C:\DATA\code\auto_learn\learn.py[line:329] - INFO: 1.8 this already readed.
+2020-01-04 18:34:58,292 - C:\DATA\code\auto_learn\learn.py[line:319] - INFO: 您确定要提交试卷吗？
+2020-01-04 18:35:00,708 - C:\DATA\code\auto_learn\learn.py[line:268] - INFO: question titles is : ['1.   以下情况确定有较强传染性的是（）。  ', '2.   传染性非典型肺炎首发症状为（）。  ', '3.   传染性非典型肺炎传播途径有（）。  ', '4.   传染性非典型肺炎治疗原则中对症治疗不包括（）。  ', '5.   传染性非典型肺炎对于个人防护中的加强防护不包括（）。  ']
+2020-01-04 18:35:00,709 - C:\DATA\code\auto_learn\learn.py[line:269] - INFO: anser is : [0, 2, 1, 2, 3]
+2020-01-04 18:35:50,254 - C:\DATA\code\auto_learn\learn.py[line:319] - INFO: 您确定要提交试卷吗？
+2020-01-04 18:35:55,443 - C:\DATA\code\auto_learn\learn.py[line:319] - INFO: 申请成功!
+2020-01-04 18:35:55,450 - C:\DATA\code\auto_learn\learn.py[line:104] - INFO: skip read video
+2020-01-04 19:40:00,496 - C:\DATA\code\auto_learn\my_logger.py[line:40] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 19:40:00,552 - C:\DATA\code\auto_learn\my_logger.py[line:40] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 19:43:45,648 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 19:44:04,448 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 19:44:04,502 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 19:44:12,702 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="ccc4c80fa7a8bd6bd0e9b6c34b3571da", element="5544e806-accf-4cef-b606-dab3d65aeea1")>, <selenium.webdriver.remote.webelement.WebElement (session="ccc4c80fa7a8bd6bd0e9b6c34b3571da", element="3a1c3b99-75fd-44a6-b448-7d1e76bdf3b1")>, <selenium.webdriver.remote.webelement.WebElement (session="ccc4c80fa7a8bd6bd0e9b6c34b3571da", element="6ee7ea2a-6d5c-45e3-886d-239c7f7d9ccb")>]
+2020-01-04 19:44:13,123 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第11是未完成
+2020-01-04 19:44:36,582 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 19:45:50,086 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 19:46:00,123 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 19:50:54,508 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 19:51:05,145 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 19:51:32,150 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 19:51:51,189 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 19:51:51,248 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 19:51:58,945 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:23:00,464 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:23:13,025 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:23:13,026 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:24:52,804 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:25:00,716 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:25:05,668 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:25:05,669 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:25:53,602 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:26:01,632 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:26:56,068 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:26:59,335 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 请不要重复学习
+2020-01-04 20:26:59,335 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:27:01,323 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 请不要重复学习
+2020-01-04 20:27:01,323 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:27:02,622 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:03,171 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:03,320 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:04,640 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:04,804 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:04,936 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,099 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,239 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,379 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,520 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,645 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:05,786 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:09,561 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:10,242 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:10,391 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:10,538 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,030 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,169 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,309 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,519 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,679 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:13,776 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:14,808 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 20:27:14,864 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 20:27:46,596 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:27:56,158 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:27:59,185 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:27:59,186 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:28:09,609 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:28:17,636 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:29:28,471 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:29:36,856 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:29:41,466 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:29:41,466 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:29:59,137 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:00,340 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:00,888 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:01,279 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:01,744 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:02,210 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:02,617 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:02,956 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:03,178 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:03,401 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:30:04,523 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:30:15,719 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:36:34,245 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:36:39,012 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:36:49,628 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:36:52,083 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:36:58,742 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 请不要重复学习
+2020-01-04 20:37:00,923 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:37:09,529 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:43:18,811 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:43:30,743 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:43:32,935 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:43:34,225 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:43:42,248 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:43:42,249 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:43:42,284 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:43:42,297 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 20:49:34,186 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:49:45,640 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:49:47,953 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:49:47,956 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:49:55,980 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:49:55,981 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:51:02,871 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:51:21,926 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 20:51:21,982 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 20:51:30,128 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="7ce4b4db942ff6185920891b1f9e84ad", element="582a4c9d-b23a-44b8-b2dc-46d5058ed188")>, <selenium.webdriver.remote.webelement.WebElement (session="7ce4b4db942ff6185920891b1f9e84ad", element="826c7c8f-829a-4b2f-9abb-805c04b117b7")>, <selenium.webdriver.remote.webelement.WebElement (session="7ce4b4db942ff6185920891b1f9e84ad", element="4eaabcdd-be62-4de1-bda1-98e7765cb7c3")>]
+2020-01-04 20:56:16,861 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:56:23,623 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 20:56:29,563 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 20:56:29,565 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 20:56:29,603 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:56:29,616 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:56:29,618 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:56:29,620 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:56:29,660 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:56:29,673 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 20:59:52,905 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 20:59:56,963 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:00:05,447 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:00:07,065 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:00:09,256 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 21:00:13,904 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:00:14,923 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:00:15,369 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 21:00:19,675 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:20,705 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:21,575 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:23,379 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:24,741 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:25,627 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:26,079 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:26,276 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:26,463 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:26,676 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:28,312 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:33,471 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:00:36,980 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 21:00:44,577 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:00:47,564 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 21:00:49,569 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 21:01:06,768 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 21:01:11,836 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:01:12,715 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:01:12,943 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:01:13,106 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:01:13,476 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:01:13,661 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:01:19,853 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 21:01:25,791 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 21:01:25,847 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 21:01:27,164 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:01:29,351 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 21:02:06,294 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 21:02:10,873 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:02:25,252 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-04 21:02:25,310 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-04 21:02:27,276 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:02:39,034 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:02:41,455 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 21:02:45,782 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:46,742 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:47,179 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:47,358 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:47,528 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:47,719 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:48,037 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:48,199 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:02:48,355 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:04:08,577 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-04 21:04:22,238 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-04 21:04:24,098 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:04:24,506 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-04 21:04:27,270 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:04:29,628 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 太快了，请10秒后在点击
+2020-01-04 21:04:30,557 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-04 21:04:32,549 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:04:33,437 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-04 21:15:42,813 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-05 06:53:49,743 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-05 06:54:02,309 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-05 06:54:04,484 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-05 06:54:11,348 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-05 06:54:22,594 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-05 06:54:41,133 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-05 06:54:41,186 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-05 06:54:44,040 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-05 06:54:46,219 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-05 06:54:57,353 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
+2020-01-05 06:55:53,880 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:55,025 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:55,753 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:56,123 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:56,495 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:56,828 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:57,200 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:55:57,519 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:56:00,788 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:56:04,001 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 您没有在学习
+2020-01-05 06:56:29,846 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已开始学习
+2020-01-05 06:56:48,055 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
+2020-01-05 06:56:48,111 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
+2020-01-05 06:56:51,716 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 正在停止学习
+2020-01-05 06:56:53,982 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 已停止学习
+2020-01-05 06:57:04,286 - C:\DATA\code\auto_learn\my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭

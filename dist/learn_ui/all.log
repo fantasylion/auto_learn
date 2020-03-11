@@ -1,9 +1,0 @@
-2020-01-04 21:17:49,712 - my_logger.py[line:43] - INFO: 已开始学习
-2020-01-04 21:18:08,472 - my_logger.py[line:43] - INFO: 第0个课程状态：培训状态： 合格
-2020-01-04 21:18:08,526 - my_logger.py[line:43] - INFO: 第1个课程状态：培训状态： 未合格
-2020-01-04 21:18:16,722 - my_logger.py[line:43] - INFO: [<selenium.webdriver.remote.webelement.WebElement (session="529011e8a4034ae936b10e1a13393719", element="556c5f70-75fe-4631-aeb7-ddd51c551640")>, <selenium.webdriver.remote.webelement.WebElement (session="529011e8a4034ae936b10e1a13393719", element="9830f652-aed9-439d-ae28-065b128b51d5")>, <selenium.webdriver.remote.webelement.WebElement (session="529011e8a4034ae936b10e1a13393719", element="3044a2cd-483b-4bbc-8a4f-4ce0a24a9fca")>]
-2020-01-04 21:18:17,086 - my_logger.py[line:43] - INFO: 第11是未完成
-2020-01-04 21:18:25,855 - my_logger.py[line:43] - INFO: 正在停止学习
-2020-01-04 21:18:28,080 - my_logger.py[line:43] - INFO: 已停止学习
-2020-01-04 21:18:38,458 - my_logger.py[line:43] - INFO: 学习异常停止，线程已经关闭
-2020-01-04 21:18:41,904 - my_logger.py[line:43] - INFO: 您没有在学习

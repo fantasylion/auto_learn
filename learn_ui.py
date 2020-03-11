@@ -23,8 +23,8 @@ class Application_ui(Frame):
         sw = self.master.winfo_screenwidth()
         sh = self.master.winfo_screenheight()
         # 得到屏幕高度
-        ww = 522
-        wh = 313
+        ww = 582
+        wh = 363
         # 窗口宽高为100
         x = (sw - ww) / 2
         y = (sh - wh) / 2
@@ -119,7 +119,7 @@ class Application(Application_ui):
 
 if __name__ == "__main__":
     top = Tk()
-    top.iconbitmap('C:\\DATA\\code\\auto_learn\\rr.ico')
+    top.iconbitmap('rr.ico')
     Application(top).mainloop()
     try: top.destroy()
     except: pass

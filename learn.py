@@ -18,6 +18,7 @@
 # under the License.
 import configparser
 import os
+import traceback
 
 from selenium import webdriver
 import time
@@ -68,7 +69,9 @@ class Learn:
             self.browser.get(self.url)
             self.login_in()
             self.start_course()
-        except:
+        except Exception as e:
+            self.my_logger.info(e.args)
+            self.my_logger.info(traceback.format_exc())
             self.my_logger.info('学习异常停止，线程已经关闭')
 
     def start_course(self):
@@ -124,14 +127,23 @@ class Learn:
     def return_to_training_info(self):
         """从视频播放页面返回到课件详情页"""
         time.sleep(2)
-        return_btn = self.browser.find_element_by_css_selector('#return .btn_c')
-        return_btn.click()
+        # todo 返回课件详情页有问题
+        # return_btn = self.browser.find_element_by_css_selector('#return .btn_c')
+        # return_btn.click()
+        a_links = self.browser.find_elements_by_css_selector('.mt-tabpage-title a')
+        if len(a_links) >= 4:
+            a_links[3].click()
 
     def return_to_training_list(self):
         """从课件详情页面返回到课件列表页面"""
         time.sleep(3)
-        return_btn2 = self.browser.find_elements_by_css_selector('.tj_btn .btn_c')
-        return_btn2[1].click()
+        # todo 返回课件详情页有问题
+        # return_btn2 = self.browser.find_elements_by_css_selector('.tj_btn .btn_c')
+        return_btn2 = self.browser.find_elements_by_css_selector('.tgks_title_c div')
+        if len(return_btn2) >= 1:
+            return_btn2[0].click()
+        else:
+            self.my_logger.info('Can not return course detail.')
 
     def listen_video_end(self, count):
         try:
@@ -167,6 +179,12 @@ class Learn:
         login_btn = self.browser.find_element_by_css_selector('.login_btn')
         time.sleep(1)
         login_btn.click()
+        change_pwd_title = self.browser.find_elements_by_css_selector('.title_list_a a')
+        if len(change_pwd_title) >= 1:  # 如果是要修改密码就返回直接登录
+            self.browser.back()
+            time.sleep(1)
+            relogin_btn = self.browser.find_element_by_css_selector('.login_main .login_btn')
+            relogin_btn.click()
 
     def select_course(self):
         time.sleep(3)
@@ -176,7 +194,7 @@ class Learn:
             training = li.find_element_by_css_selector('.trainingPic')
             p_list = li.find_elements_by_css_selector('.training_infor p')
             self.my_logger.info("第{}个课程状态：{}".format(str(index), p_list[3].text))
-            if '培训状态： 未合格' == p_list[3].text:
+            if '培训状态： 合格' == p_list[3].text:
                 self.current_course_index = index
                 return training
         return None
